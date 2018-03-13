@@ -34,6 +34,12 @@ module.exports = function(grunt) {
         dest: 'dist/videojs.vr.min.js'
       },
     },
+    copy: {
+      main: {
+        files: [
+          {expand: true, src: ['dist/*.js'], dest: '../js/', flatten: true,filter: 'isFile'}],
+        },
+    },
     qunit: {
       files: ['test/**/*.html']
     },
@@ -80,8 +86,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'qunit', 'clean', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'qunit', 'clean', 'concat', 'uglify','copy']);
 
 };

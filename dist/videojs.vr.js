@@ -1,5 +1,5 @@
-/*! videojs-vr - v0.1.0 - 2014-04-09
-* Copyright (c) 2014 Sean Lawrence; Licensed  */
+/*! videojs-vr - v0.1.0 - 2018-02-20
+* Copyright (c) 2018 Sean Lawrence; Licensed  */
 THREE.PointerLockControls = THREE.PointerLockControls || function ( camera ) {
 
     var scope = this;
